@@ -9,10 +9,14 @@
       box-sizing: border-box;
     }
 
+    section {
+      text-align: center;
+    }
+
     .example-image {
       width: auto;
       max-height: 100vh;
-      margin: 10px;
+      margin: 10px auto;
       display: block;
     }
   </style>
@@ -20,7 +24,25 @@
 <body>
 
   <section>
-    <h3>Sailing LLC</h3>
+    <h2>Sailing LLC</h2>
+
+    <h3>
+      Email:
+      <span id="email"></span>
+    </h3>
+
+    <h3>
+      WhatsApp/Mobile:
+      <span id="mobile"></span>
+    </h3>
+
+    <script type="text/javascript">
+      const mobile = atob('MDA4NiAxMzk2MTM4NjI2Mw==');
+      const email = atob('bGVvQHNhaWxpbmdsbGMuY29t')
+      document.getElementById("mobile").innerHTML = `<a href="tel:${mobile}">${mobile}</a>`;
+      document.getElementById("email").innerHTML = `<a href="mailto:${email}">${email}</a>`;;
+
+    </script>
     <!-- <div>
       <a class="example-image-link" href="http://lokeshdhakar.com/projects/lightbox2/images/image-1.jpg" data-lightbox="example-1"><img class="example-image" src="http://lokeshdhakar.com/projects/lightbox2/images/thumb-1.jpg" alt="image-1" /></a>
       <a class="example-image-link" href="http://lokeshdhakar.com/projects/lightbox2/images/image-2.jpg" data-lightbox="example-2" data-title="Optional caption."><img class="example-image" src="http://lokeshdhakar.com/projects/lightbox2/images/thumb-2.jpg" alt="image-1"/></a>
